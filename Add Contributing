@@ -1,0 +1,65 @@
+// Code Run On Console 
+
+function playRound(playerSelection, computerSelection) {
+   
+    if (playerSelection === "rock" && computerSelection === "scissors"){
+      console.log(`Player Win! ${playerSelection}`);
+      console.log(`Computer Lose! ${computerSelection}`);
+      boolP;
+
+    } else if (playerSelection === "rock" && computerSelection === "paper"){
+      console.log(`Player Lose! ${playerSelection}`);
+      console.log(`Computer Win! ${computerSelection}`);
+      
+    
+    } else if (playerSelection === "rock" && computerSelection === "rock"){
+      console.log(`Player ${playerSelection} & Computer ${computerSelection} Tie`) ;
+    
+    
+    } else if (playerSelection === "scissors" && computerSelection === "paper"){
+      console.log(`Player Win! ${playerSelection}`);
+      console.log(`Computer Lose! ${computerSelection}`);
+      
+    
+    } else if (playerSelection === "scissors" && computerSelection === "rock"){
+      console.log(`Player Lose! ${playerSelection}`);
+      console.log(`Computer Win! ${computerSelection}`);
+      
+    
+    } else if (playerSelection === "scissors" && computerSelection === "scissors"){
+      console.log(`Player ${playerSelection} & Computer ${computerSelection} Tie`) ;
+    
+    
+    } else if (playerSelection === "paper" && computerSelection === "scissors"){
+      console.log(`Player Lose! ${playerSelection}`);
+      console.log(`Computer Win! ${computerSelection}`);
+      
+    
+    } else if (playerSelection === "paper" && computerSelection === "rock"){
+      console.log(`Player Win! ${playerSelection}`);
+      console.log(`Computer Lose! ${computerSelection}`);
+      
+    
+    } else if (playerSelection === "paper" && computerSelection === "paper"){
+      console.log(`Player ${playerSelection} & Computer ${computerSelection} Tie`) ;
+    
+    }  
+  return;
+}
+
+function computerPlay(){
+    const myArray = ['rock','paper','scissors'];
+    let random = myArray[Math.floor(Math.random() * myArray.length)]
+    return random
+
+}
+
+function playerSelection(){
+  const myArray = ['rock','paper','scissors'];
+  let random = myArray[Math.floor(Math.random() * myArray.length)]
+  return random
+
+}
+  const player = playerSelection();
+  const computerSelection = computerPlay();
+  playRound(player, computerSelection);
